@@ -1,0 +1,123 @@
+*{
+    margin:0px;
+    padding: 0px;
+    list-style-type:none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+header{
+    display:flex;
+    justify-content: space-between;
+    background-color: rgb(58, 28, 189);
+    color:white;
+    flex-wrap: wrap;
+    padding-top: 10px;
+    height: 50px;
+}
+header div{
+    margin-left: 5px;
+}
+
+nav{
+    margin-right: 5px;
+}
+header nav ul{
+    display: flex;
+    justify-content:space-around;
+    gap:50px;
+}
+
+header nav ul li{
+    width: 70px;
+    /* border: 2px solid blue; */
+    text-align: center;
+}
+header nav ul li:hover{
+    background-color: blue;
+    transform: scale(1.25);
+}
+header nav li a{
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+}
+
+main{
+    padding: 2rem;
+    margin: 0px 10px;
+    cursor: pointer;
+}
+
+.first{
+    background-color: rgba(12, 12, 12, 0.76);
+    text-align: center;
+    margin: auto;
+    color:white;
+    padding: 4rem 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 2px 2px 10px white;
+}
+
+.first h1{
+    text-decoration: underline;
+}
+
+.first:hover{
+    transform: scale(1.10);
+    transition: step-end;
+}
+.second{
+    background-color: rgba(100, 139, 177, 0.76);
+    text-align: center;
+    margin: auto;
+    color:white;
+    padding: 4rem 2rem;
+    margin-bottom: 2rem;
+}
+.second h1{
+    text-decoration: underline;
+}
+.second:hover{
+    transform: scale(1.10);
+    transition-duration: 0.5s;
+    transition: step-end;
+}
+
+section{
+    text-align: center;
+}
+
+.teacher{
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-around;
+    
+}
+.teacher div{
+    background-color: rgb(130, 185, 231);
+    border: 1px solid #ddd;
+    padding: 2rem;
+    border-radius: 6px;
+    width: 250px;
+    cursor: pointer;
+    color:black;
+}
+
+.teacher div h3{
+    text-decoration: underline;
+}
+
+.teacher div:hover{
+    transform: scale(1.1);
+}
+footer{
+    background-color:rgb(58, 28, 189) ;
+    color: white;
+}
+
+footer div{
+    /* display:flex;
+    justify-content: space-around; */
+    padding: 1rem;
+    text-align: center;
+}
