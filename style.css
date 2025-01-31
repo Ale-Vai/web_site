@@ -1,0 +1,290 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css');
+
+*{
+    margin: 0; padding: 0; outline: 0;
+    text-decoration: none; list-style: none;
+    box-sizing: border-box;
+}
+
+:root{
+    --main-color: #3B6790;
+    --border: .2rem solid #ddd;
+    --box-shadow: 0 .5rem 1.5rem #ddd;
+    --black: #5C7285;
+    --all-shadow: 0 0 10px 5px #ddd;
+    --all-padding: 10px 10px;
+}
+
+html{
+    color: var(--black);
+}
+
+.header{
+    position: fixed; top: 0; right: 0; left: 0;
+    background-color: #FBFBFB;
+    z-index: 1000; padding: 20px 0px;
+    box-shadow: var(--box-shadow);
+    font-size: 1.1rem;
+}
+
+.header .flex .dog{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header .flex #logo{
+    font-size: 1.5rem;
+}
+
+.header .flex{
+    display: flex;
+    justify-content: space-around;
+}
+
+#user{
+    padding: 5px 10px;
+    display: inline-block;
+    text-align: center;
+    border-radius: .5rem;
+    color: var(--main-color);
+}
+
+#user:hover{
+    background-color: var(--main-color);
+    color: white;
+}
+
+.header .flex .menu{
+    display: none;
+    font-size: 1.3rem;
+    border-radius: .3rem;
+}
+
+.header .flex .menu:hover{
+    background-color: var(--main-color);
+    color: white;
+}
+
+#paw{
+    font-size: large;
+}
+
+.header .flex .navbar{
+    display: inline-block;
+}
+
+.header .flex .navbar a{
+    padding: 5px 10px;
+    color: var(--main-color);
+    border-radius: .3rem;
+    cursor: pointer;
+}
+
+.header .flex .navbar a:hover{
+    background-color: var(--main-color);
+    color: white;
+}
+
+.main{
+    position: relative; top: 6rem;
+}
+
+/* .main #intro{
+
+} */
+.main #intro h1{
+    margin: 10px 0px;
+    text-align: center;
+}
+.main #intro img{
+    width: 80%;
+    height: 50%;
+    display: block;
+    margin:0px auto;
+}
+
+.main #intro p{
+    width: 80%;
+    display: block;
+    margin: 5px auto;
+    padding: 10px;
+    box-shadow:var(--all-shadow);
+    border-radius: .3rem;
+}
+
+#home{
+    width: 80%;
+    margin: 0 auto;
+}
+
+.main #home h1{
+    margin: 10px 0;
+    text-align: left;
+}
+
+.main #home p{
+    padding: var(--all-padding);
+    box-shadow: var(--all-shadow);
+    border-radius: .3rem;
+}
+
+#breeds{
+    width: 80%;
+    margin: 0 auto;
+}
+
+#breeds h1{
+    margin: 10px 0;
+}
+
+#breeds .flex{
+    padding: 10px 0;
+    display: block;
+    box-shadow: var(--all-shadow);
+    border-radius: .3rem;
+    
+}
+
+#breeds .flex .flex-items{
+    width:97%;
+    padding: 10px;
+    border-radius: .3rem;
+    background-color: #B6CBBD;
+    margin: 10px auto;
+}
+
+strong{
+    color:black;
+}
+
+
+#groups{
+    width: 80%;
+    margin: 0 auto;
+
+}
+
+#groups h1{
+    margin: 10px 0;
+}
+
+#groups  .dog-groups{
+    box-shadow: var(--all-shadow);
+    border-radius: .3rem;
+    padding: 10px 0;
+}
+
+#groups .dog-groups .dog-items{
+    width: 97%;
+    padding: 15px;
+    margin: 10px auto;
+    background-color: #F2EFE7;
+    border-radius: .3rem;
+}
+
+#groups .dog-groups .dog-items ol> li{
+    list-style: decimal inside;
+}
+
+#facts{
+    width: 80%;
+    margin: 0 auto;
+}
+
+#facts h1{
+    margin: 10px 0;
+}
+
+#facts .dog-facts{
+    padding: var(--all-padding);
+    box-shadow: var(--all-shadow);
+    border-radius: .3rem;
+}
+
+#ol li{
+    list-style: decimal inside;
+}
+
+
+#about{
+    position:relative; top: 6rem;
+    background-color: #ddd;
+}
+
+#about .footer-section{
+    width: 80%;
+    margin: 10px auto;
+    padding: var(--all-padding)
+}
+
+#about .footer-section h1{
+    margin: 10px 0;
+    text-align: center;
+}
+
+#about .footer-section  .description{
+    text-align: center;
+}
+
+.Social{
+    display: flex;
+    margin: 10px 0;
+    justify-content: space-around;
+}
+
+.Social a{
+    color:var(--main-color);
+    
+}
+
+.Social a > i, p > i{
+    margin-right: 5px;
+}
+
+@media (max-width: 948px){
+    html{
+        font-size: 75%;
+    }
+    
+    .Social{
+        flex-direction: row;;
+    }
+}
+@media (max-width: 778px){
+    .header .flex .menu{
+        padding: 5px 5px;
+        display: inline-block;
+    }
+
+    .header .flex .dog{
+        position: absolute;
+        right: 20%;
+    }
+
+    .header .flex{
+        padding: 0 2rem;
+        justify-content: space-between;
+    }
+
+    .header .flex .navbar{
+        display: none;
+        position: absolute;top: 5.6rem; right: 
+        0; left: 0;
+        border-bottom: var(--border);
+        z-index: 100000;
+        transition: .2s linear;
+        background-color: white;
+    }
+
+    .header .flex .navbar a{
+        display: block;
+    }
+
+    .Social{
+        display: flex;
+        flex-direction: column;
+        margin: 10px 0;
+    }
+
+}
