@@ -31,11 +31,11 @@ menu.onclick = () =>{
 }
 
 async function dogimage() {
-    let dogimage = await fetch(`https://dog.ceo/api/breeds/image/random`)
-    let newdogimage = await dogimage.json()
-    console.log(newdogimage)
-    console.log(newdogimage.message)
-    dog.src = newdogimage.message
+    let dogimg = await fetch(`https://dog.ceo/api/breeds/image/random`)
+    let newdogimg = await dogimg.json()
+    console.log(newdogimg)
+    console.log(newdogimg.message)
+    dog.src = newdogimg.message
 }dogimage();
 
 async function facts (){
