@@ -99,7 +99,7 @@ html{
 }
 .main #intro img{
     width: 80%;
-    height: 50%;
+    height: 20%;
     display: block;
     margin:0px auto;
 }
@@ -258,7 +258,7 @@ strong{
     }
 
     .header .flex .dog{
-        position: absolute;
+        position: relative;
         right: 20%;
     }
 
@@ -269,7 +269,7 @@ strong{
 
     .header .flex .navbar{
         display: none;
-        position: absolute;top: 5.6rem; right: 
+        position: relative;top: 5.6rem; right: 
         0; left: 0;
         border-bottom: var(--border);
         z-index: 100000;
