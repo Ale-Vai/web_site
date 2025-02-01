@@ -10,51 +10,48 @@ let navbar = document.querySelector('.header .flex .navbar')
 
 let el = document.querySelector("#ol")
 
+let factslist = document.querySelector('.dog-facts')
+
 let paragraph = document.querySelector('#failed')
 
 let div = document.querySelector('.dog-groups')
 
 let flex = document.querySelector("#breeds .flex")
 
+let groupspara = document.querySelector(".message")
+
 let dog = document.querySelector('.dog-image')
 
-let count = 2;
-
 menu.onclick = () =>{
-    if( count %2 ==1){
-        navbar.style.display = "none"
-    }
-    if (count % 2 == 0){
-        navbar.style.display = "block";
-    }
-    count++;
+    navbar.classList.toggle('active')
+}
+
+window.onscroll = () =>{
+    navbar.classList.remove('active')
 }
 
 async function dogimage() {
-    let dogimg = await fetch(`https://dog.ceo/api/breeds/image/random`)
-    let newdogimg = await dogimg.json()
-    console.log(newdogimg)
-    console.log(newdogimg.message)
-    dog.src = newdogimg.message
+    let dogimage = await fetch(`https://dog.ceo/api/breeds/image/random`)
+    let newdogimage = await dogimage.json()
+    dog.src = newdogimage.message
 }dogimage();
 
-async function facts (){
-    for(let i = 1; i <= 10; i++){
-        let promise = await fetch(URL);
-        if(promise){
-            
-        }
-        else{
-            paragraph.innerText = "Failed to Fetch"
-        }
-        let data = await promise.json();
-        let br = document.createElement('br')
-        let para = document.createElement("li")
-        para.innerHTML = data.data[0].attributes.body
-        el.append(para); 
-        para.after(br);
+async function breeds (){
+    let breed = await fetch(breedlist);
+    let newbreed = await breed.json();
+    for (let i = 0; i < 8 ; i++){
+        let flexdiv = document.createElement('div')
+        flexdiv.className = "flex-items"
+        let p1 = document.createElement('p')
+        let p2 = document.createElement('p')
+        p1.innerHTML = `<strong>Name:</strong> ${newbreed.data[i].attributes.name}`
+        p2.innerHTML = `<strong>Description:</strong>${newbreed.data[i].attributes.description}`
+        flexdiv.prepend(p1)
+        flexdiv.append(p2)
+        flex.append(flexdiv)
+
     }
-}facts();
+}breeds();
 
 async function Groups (){
     let response = await fetch(Group)
@@ -80,19 +77,20 @@ async function Groups (){
     }
 }Groups();
 
-async function breeds (){
-    let breed = await fetch(breedlist);
-    let newbreed = await breed.json();
-    for (let i = 0; i < 8 ; i++){
-        let flexdiv = document.createElement('div')
-        flexdiv.className = "flex-items"
-        let p1 = document.createElement('p')
-        let p2 = document.createElement('p')
-        p1.innerHTML = `<strong>Name:</strong> ${newbreed.data[i].attributes.name}`
-        p2.innerHTML = `<strong>Description:</strong>${newbreed.data[i].attributes.description}`
-        flexdiv.prepend(p1)
-        flexdiv.append(p2)
-        flex.append(flexdiv)
-
+async function facts (){
+    for(let i = 1; i <= 10; i++){
+        let promise = await fetch(URL);
+        let data = await promise.json();
+        let br = document.createElement('br')
+        let para = document.createElement("li")
+        para.innerHTML = data.data[0].attributes.body
+        el.append(para); 
+        para.after(br);
     }
-}breeds();
+}facts();
+
+
+
+
+
+  
